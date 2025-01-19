@@ -1,17 +1,16 @@
-
 local PlaceName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
 
-    if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
+if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
     
-    repeat wait() until game:GetService("Players")
+repeat wait() until game:GetService("Players")
     
-    if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") end
+if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") end
         
-    wait(1)
+wait(1)
 
-do local GUI = game.CoreGui:FindFirstChild("Darkrai");if GUI then GUI:Destroy();end;if _G.Color == nil then
-       _G.Color = Color3.fromRGB(147,112,219)
-   end 
+do local GUI = game.CoreGui:FindFirstChild("Haunter");if GUI then GUI:Destroy();end;if getgenv().Color == nil then
+   getgenv().Color = Color3.fromRGB(147,112,219)
+end 
 end
 
 local UserInputService = game:GetService("UserInputService")
@@ -68,17 +67,17 @@ local function MakeDraggable(topbarobject, object)
 	)
 end
 
-local DarkraiX = {}
+local HaunterX = {}
 
-function DarkraiX:ToggleUi()
-if game.CoreGui:FindFirstChild("Darkrai").Enabled == true then -- oh am dumb
-game.CoreGui:FindFirstChild("Darkrai").Enabled = false
+function HaunterX:ToggleUi()
+if game.CoreGui:FindFirstChild("Haunter").Enabled == true then
+game.CoreGui:FindFirstChild("Haunter").Enabled = false
 else
-game.CoreGui:FindFirstChild("Darkrai").Enabled = true
+game.CoreGui:FindFirstChild("Haunter").Enabled = true
 end
 end
 
-function DarkraiX:Window(text,gamenme,logo,keybind)
+function HaunterX:Window(text,gamenme,logo,keybind)
     local hubname = text
     local gamename = gamenme
 	local uihide = false
@@ -91,21 +90,21 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	    gamename = ""..PlaceName.Name
     end
 	
-	local Darkrai = Instance.new("ScreenGui") -- guess i am using hubname wrong
-	Darkrai.Name = "Darkrai" -- wait
-	Darkrai.Parent = game.CoreGui
-	Darkrai.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	local Haunter = Instance.new("ScreenGui")
+	Haunter.Name = "Haunter"
+	Haunter.Parent = game.CoreGui
+	Haunter.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	local Main = Instance.new("Frame")
 	Main.Name = "Main"
-	Main.Parent = Darkrai
+	Main.Parent = Haunter
 	Main.ClipsDescendants = true
 	Main.AnchorPoint = Vector2.new(0.5,0.5)
 	Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 	Main.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Main.Size = UDim2.new(0, 0, 0, 0)
 	
-	Main:TweenSize(UDim2.new(0, 656, 0, 400),"Out","Quad",0.4,true)
+	Main:TweenSize(UDim2.new(0, 500, 0, 300),"Out","Quad",0.4,true)
 
 	local MCNR = Instance.new("UICorner")
 	MCNR.Name = "MCNR"
@@ -115,7 +114,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Top.Name = "Top"
 	Top.Parent = Main
 	Top.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-	Top.Size = UDim2.new(0, 656, 0, 27)
+	Top.Size = UDim2.new(0, 500, 0, 27)
 
 	local TCNR = Instance.new("UICorner")
 	TCNR.Name = "TCNR"
@@ -172,7 +171,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Tab.Parent = Main
 	Tab.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	Tab.Position = UDim2.new(0, 5, 0, 30)
-	Tab.Size = UDim2.new(0, 150, 0, 365)
+	Tab.Size = UDim2.new(0, 120, 0, 265)
 
 	local TCNR = Instance.new("UICorner")
 	TCNR.Name = "TCNR"
@@ -184,7 +183,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	ScrollTab.Active = true
 	ScrollTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	ScrollTab.BackgroundTransparency = 1.000
-	ScrollTab.Size = UDim2.new(0, 150, 0, 365)
+	ScrollTab.Size = UDim2.new(0, 120, 0, 265)
 	ScrollTab.CanvasSize = UDim2.new(0, 0, 0, 0)
 	ScrollTab.ScrollBarThickness = 0
 
@@ -205,7 +204,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Page.Parent = Main
 	Page.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
-	Page.Size = UDim2.new(0, 490, 0, 365)
+	Page.Size = UDim2.new(0, 365, 0, 265)
 
 	local PCNR = Instance.new("UICorner")
 	PCNR.Name = "PCNR"
@@ -217,7 +216,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	MainPage.ClipsDescendants = true
 	MainPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	MainPage.BackgroundTransparency = 1.000
-	MainPage.Size = UDim2.new(0, 490, 0, 365)
+	MainPage.Size = UDim2.new(0, 365, 0, 265)
 
 	local PageList = Instance.new("Folder")
 	PageList.Name = "PageList"
@@ -245,7 +244,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 				Main:TweenSize(UDim2.new(0, 0, 0, 0),"In","Quad",0.4,true)
 			else
 				uihide = false
-				Main:TweenSize(UDim2.new(0, 656, 0, 400),"Out","Quad",0.4,true)
+				Main:TweenSize(UDim2.new(0, 500, 0, 300),"Out","Quad",0.4,true)
 			end
 		end
 	end)
@@ -260,7 +259,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		TabButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	    TabButton.BorderColor3 = Color3.fromRGB(147,112,219)
         TabButton.BorderSizePixel = 3
-		TabButton.Size = UDim2.new(0, 130, 0, 23)
+		TabButton.Size = UDim2.new(0, 100, 0, 23)
 		TabButton.Font = Enum.Font.GothamSemibold
 		TabButton.TextColor3 = Color3.fromRGB(225, 225, 225)
 		TabButton.TextSize = 15.000
@@ -273,7 +272,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		MainFramePage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		MainFramePage.BackgroundTransparency = 1.000
 		MainFramePage.BorderSizePixel = 0
-		MainFramePage.Size = UDim2.new(0, 490, 0, 365)
+		MainFramePage.Size = UDim2.new(0, 365, 0, 265)
 		MainFramePage.CanvasSize = UDim2.new(0, 0, 0, 0)
 		MainFramePage.ScrollBarThickness = 0
 		
@@ -348,8 +347,8 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			
 			Button.Name = "Button"
 			Button.Parent = MainFramePage
-			Button.BackgroundColor3 = _G.Color
-			Button.Size = UDim2.new(0, 470, 0, 31)
+			Button.BackgroundColor3 = getgenv().Color
+			Button.Size = UDim2.new(0, 345, 0, 31)
 			
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = Button
@@ -358,7 +357,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			TextBtn.Parent = Button
 			TextBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			TextBtn.Position = UDim2.new(0, 1, 0, 1)
-			TextBtn.Size = UDim2.new(0, 468, 0, 29)
+			TextBtn.Size = UDim2.new(0, 343, 0, 29)
 			TextBtn.AutoButtonColor = false
 			TextBtn.Font = Enum.Font.GothamSemibold
 			TextBtn.Text = text
@@ -374,7 +373,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Black.BackgroundTransparency = 1.000
 			Black.BorderSizePixel = 0
 			Black.Position = UDim2.new(0, 1, 0, 1)
-			Black.Size = UDim2.new(0, 468, 0, 29)
+			Black.Size = UDim2.new(0, 343, 0, 29)
 			
 			UICorner_3.CornerRadius = UDim.new(0, 5)
 			UICorner_3.Parent = Black
@@ -418,8 +417,8 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 
 			Toggle.Name = "Toggle"
 			Toggle.Parent = MainFramePage
-			Toggle.BackgroundColor3 = _G.Color
-			Toggle.Size = UDim2.new(0, 470, 0, 31)
+			Toggle.BackgroundColor3 = getgenv().Color
+			Toggle.Size = UDim2.new(0, 345, 0, 31)
 
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = Toggle
@@ -428,7 +427,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Button.Parent = Toggle
 			Button.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Button.Position = UDim2.new(0, 1, 0, 1)
-			Button.Size = UDim2.new(0, 468, 0, 29)
+			Button.Size = UDim2.new(0, 343, 0, 29)
 			Button.AutoButtonColor = false
 			Button.Font = Enum.Font.SourceSans
 			Button.Text = ""
@@ -443,7 +442,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Label.BackgroundTransparency = 1.000
 			Label.Position = UDim2.new(0, 1, 0, 1)
-			Label.Size = UDim2.new(0, 468, 0, 29)
+			Label.Size = UDim2.new(0, 343, 0, 29)
 			Label.Font = Enum.Font.GothamSemibold
 			Label.Text = text
 			Label.TextColor3 = Color3.fromRGB(225, 225, 225)
@@ -452,7 +451,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			ToggleImage.Name = "ToggleImage"
 			ToggleImage.Parent = Toggle
 			ToggleImage.BackgroundColor3 = Color3.fromRGB(225, 225, 225)
-			ToggleImage.Position = UDim2.new(0, 415, 0, 5)
+			ToggleImage.Position = UDim2.new(0, 295, 0, 5)
 			ToggleImage.Size = UDim2.new(0, 45, 0, 20)
 
 			UICorner_3.CornerRadius = UDim.new(0, 10)
@@ -474,7 +473,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{BackgroundColor3 = _G.Color}
+						{BackgroundColor3 = getgenv().Color}
 					):Play()
 				else
 					toggled = false
@@ -494,7 +493,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 				TweenService:Create(
 					Circle,
 					TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-					{BackgroundColor3 = _G.Color}
+					{BackgroundColor3 = getgenv().Color}
 				):Play()
 				pcall(callback,toggled)
 			end
@@ -514,7 +513,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Dropdown.Parent = MainFramePage
 			Dropdown.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Dropdown.ClipsDescendants = true
-			Dropdown.Size = UDim2.new(0, 470, 0, 31)
+			Dropdown.Size = UDim2.new(0, 345, 0, 31)
 			
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = Dropdown
@@ -523,7 +522,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			DropTitle.Parent = Dropdown
 			DropTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropTitle.BackgroundTransparency = 1.000
-			DropTitle.Size = UDim2.new(0, 470, 0, 31)
+			DropTitle.Size = UDim2.new(0, 345, 0, 31)
 			DropTitle.Font = Enum.Font.GothamSemibold
 			DropTitle.Text = text.. " : "
 			DropTitle.TextColor3 = Color3.fromRGB(225, 225, 225)
@@ -536,7 +535,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			DropScroll.BackgroundTransparency = 1.000
 			DropScroll.BorderSizePixel = 0
 			DropScroll.Position = UDim2.new(0, 0, 0, 31)
-			DropScroll.Size = UDim2.new(0, 470, 0, 100)
+			DropScroll.Size = UDim2.new(0, 345, 0, 100)
 			DropScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
 			DropScroll.ScrollBarThickness = 3
 			
@@ -552,7 +551,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			DropImage.Parent = Dropdown
 			DropImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropImage.BackgroundTransparency = 1.000
-			DropImage.Position = UDim2.new(0, 445, 0, 6)
+			DropImage.Position = UDim2.new(0, 320, 0, 6)
 			DropImage.Rotation = 180.000
 			DropImage.Size = UDim2.new(0, 20, 0, 20)
 			DropImage.Image = "rbxassetid://6031090990"
@@ -561,7 +560,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			DropButton.Parent = Dropdown
 			DropButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropButton.BackgroundTransparency = 1.000
-			DropButton.Size = UDim2.new(0, 470, 0, 31)
+			DropButton.Size = UDim2.new(0, 345, 0, 31)
 			DropButton.Font = Enum.Font.SourceSans
 			DropButton.Text = ""
 			DropButton.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -574,7 +573,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 				Item.Parent = DropScroll
 				Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				Item.BackgroundTransparency = 1.000
-				Item.Size = UDim2.new(0, 460, 0, 26)
+				Item.Size = UDim2.new(0, 335, 0, 26)
 				Item.Font = Enum.Font.GothamSemibold
 				Item.Text = tostring(v)
 				Item.TextColor3 = Color3.fromRGB(225, 225, 225)
@@ -599,7 +598,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 
 				Item.MouseButton1Click:Connect(function()
 					isdropping = false
-					Dropdown:TweenSize(UDim2.new(0,470,0,31),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,345,0,31),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -615,7 +614,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			DropButton.MouseButton1Click:Connect(function()
 				if isdropping == false then
 					isdropping = true
-					Dropdown:TweenSize(UDim2.new(0,470,0,131),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,345,0,131),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -623,7 +622,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 					):Play()
 				else
 					isdropping = false
-					Dropdown:TweenSize(UDim2.new(0,470,0,31),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,345,0,31),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -639,7 +638,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 				Item.Parent = DropScroll
 				Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				Item.BackgroundTransparency = 1.000
-				Item.Size = UDim2.new(0, 470, 0, 26)
+				Item.Size = UDim2.new(0, 335, 0, 26)
 				Item.Font = Enum.Font.GothamSemibold
 				Item.Text = tostring(t)
 				Item.TextColor3 = Color3.fromRGB(225, 225, 225)
@@ -664,7 +663,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 
 				Item.MouseButton1Click:Connect(function()
 					isdropping = false
-					Dropdown:TweenSize(UDim2.new(0,470,0,31),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,345,0,31),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -677,7 +676,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			function dropfunc:Clear()
 				DropTitle.Text = tostring(text).." : "
 				isdropping = false
-				Dropdown:TweenSize(UDim2.new(0,470,0,31),"Out","Quad",0.3,true)
+				Dropdown:TweenSize(UDim2.new(0,345,0,31),"Out","Quad",0.3,true)
 				TweenService:Create(
 					DropImage,
 					TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -700,7 +699,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			local SliderLabel = Instance.new("TextLabel")
 			local HAHA = Instance.new("Frame")
 			local AHEHE = Instance.new("TextButton")
-			local bar = Instance.new("Frame")
+						local bar = Instance.new("Frame")
 			local bar1 = Instance.new("Frame")
 			local bar1corner = Instance.new("UICorner")
 			local barcorner = Instance.new("UICorner")
@@ -713,9 +712,9 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 
 			Slider.Name = "Slider"
 			Slider.Parent = MainFramePage
-			Slider.BackgroundColor3 = _G.Color
+			Slider.BackgroundColor3 = getgenv().Color
 			Slider.BackgroundTransparency = 0
-			Slider.Size = UDim2.new(0, 470, 0, 51)
+			Slider.Size = UDim2.new(0, 345, 0, 51)
 
 			slidercorner.CornerRadius = UDim.new(0, 5)
 			slidercorner.Name = "slidercorner"
@@ -725,7 +724,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			sliderr.Parent = Slider
 			sliderr.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			sliderr.Position = UDim2.new(0, 1, 0, 1)
-			sliderr.Size = UDim2.new(0, 468, 0, 49)
+			sliderr.Size = UDim2.new(0, 343, 0, 49)
 
 			sliderrcorner.CornerRadius = UDim.new(0, 5)
 			sliderrcorner.Name = "sliderrcorner"
@@ -748,14 +747,14 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			HAHA.Parent = sliderr
 			HAHA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			HAHA.BackgroundTransparency = 1.000
-			HAHA.Size = UDim2.new(0, 468, 0, 29)
+			HAHA.Size = UDim2.new(0, 343, 0, 29)
 
 			AHEHE.Name = "AHEHE"
 			AHEHE.Parent = sliderr
 			AHEHE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			AHEHE.BackgroundTransparency = 1.000
 			AHEHE.Position = UDim2.new(0, 10, 0, 35)
-			AHEHE.Size = UDim2.new(0, 448, 0, 5)
+			AHEHE.Size = UDim2.new(0, 323, 0, 5)
 			AHEHE.Font = Enum.Font.SourceSans
 			AHEHE.Text = ""
 			AHEHE.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -764,11 +763,11 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			bar.Name = "bar"
 			bar.Parent = AHEHE
 			bar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-			bar.Size = UDim2.new(0, 448, 0, 5)
+			bar.Size = UDim2.new(0, 323, 0, 5)
 
 			bar1.Name = "bar1"
 			bar1.Parent = bar
-			bar1.BackgroundColor3 = _G.Color
+			bar1.BackgroundColor3 = getgenv().Color
 			bar1.BackgroundTransparency = 0
 			bar1.Size = UDim2.new(set/max, 0, 0, 5)
 
@@ -791,9 +790,9 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 
 			slidervalue.Name = "slidervalue"
 			slidervalue.Parent = sliderr
-			slidervalue.BackgroundColor3 = _G.Color
+			slidervalue.BackgroundColor3 = getgenv().Color
 			slidervalue.BackgroundTransparency = 0
-			slidervalue.Position = UDim2.new(0, 395, 0, 5)
+			slidervalue.Position = UDim2.new(0, 275, 0, 5)
 			slidervalue.Size = UDim2.new(0, 65, 0, 18)
 
 			valuecorner.CornerRadius = UDim.new(0, 5)
@@ -824,29 +823,29 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			end
 			
 			AHEHE.MouseButton1Down:Connect(function()
-				Value = math.floor((((tonumber(max) - tonumber(min)) / 448) * bar1.AbsoluteSize.X) + tonumber(min)) or 0
+				Value = math.floor((((tonumber(max) - tonumber(min)) / 323) * bar1.AbsoluteSize.X) + tonumber(min)) or 0
 				pcall(function()
 					callback(Value)
 				end)
-				bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
-				circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
+				bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 323), 0, 5)
+				circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 313), 0, -3)
 				moveconnection = mouse.Move:Connect(function()
 					TextBox.Text = Value
-					Value = math.floor((((tonumber(max) - tonumber(min)) / 448) * bar1.AbsoluteSize.X) + tonumber(min))
+					Value = math.floor((((tonumber(max) - tonumber(min)) / 323) * bar1.AbsoluteSize.X) + tonumber(min))
 					pcall(function()
 						callback(Value)
 					end)
-					bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
-					circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
+					bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 323), 0, 5)
+					circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 313), 0, -3)
 				end)
 				releaseconnection = uis.InputEnded:Connect(function(Mouse)
 					if Mouse.UserInputType == Enum.UserInputType.MouseButton1 or Mouse.UserInputType == Enum.UserInputType.Touch then
-						Value = math.floor((((tonumber(max) - tonumber(min)) / 448) * bar1.AbsoluteSize.X) + tonumber(min))
+						Value = math.floor((((tonumber(max) - tonumber(min)) / 323) * bar1.AbsoluteSize.X) + tonumber(min))
 						pcall(function()
 							callback(Value)
 						end)
-						bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
-						circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
+						bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 323), 0, 5)
+						circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 313), 0, -3)
 						moveconnection:Disconnect()
 						releaseconnection:Disconnect()
 					end
@@ -854,7 +853,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			end)
 			releaseconnection = uis.InputEnded:Connect(function(Mouse)
 				if Mouse.UserInputType == Enum.UserInputType.MouseButton1 or Mouse.UserInputType == Enum.UserInputType.Touch  then
-					Value = math.floor((((tonumber(max) - tonumber(min)) / 448) * bar1.AbsoluteSize.X) + tonumber(min))
+					Value = math.floor((((tonumber(max) - tonumber(min)) / 323) * bar1.AbsoluteSize.X) + tonumber(min))
 					TextBox.Text = Value
 				end
 			end)
@@ -882,9 +881,9 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 
 			Textbox.Name = "Textbox"
 			Textbox.Parent = MainFramePage
-			Textbox.BackgroundColor3 = _G.Color
+			Textbox.BackgroundColor3 = getgenv().Color
 			Textbox.BackgroundTransparency = 0
-			Textbox.Size = UDim2.new(0, 470, 0, 31)
+			Textbox.Size = UDim2.new(0, 345, 0, 31)
 
 			TextboxCorner.CornerRadius = UDim.new(0, 5)
 			TextboxCorner.Name = "TextboxCorner"
@@ -894,7 +893,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Textboxx.Parent = Textbox
 			Textboxx.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Textboxx.Position = UDim2.new(0, 1, 0, 1)
-			Textboxx.Size = UDim2.new(0, 468, 0, 29)
+			Textboxx.Size = UDim2.new(0, 343, 0, 29)
 
 			TextboxxCorner.CornerRadius = UDim.new(0, 5)
 			TextboxxCorner.Name = "TextboxxCorner"
@@ -918,7 +917,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			txtbtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			txtbtn.BackgroundTransparency = 1.000
 			txtbtn.Position = UDim2.new(0, 1, 0, 1)
-			txtbtn.Size = UDim2.new(0, 468, 0, 29)
+			txtbtn.Size = UDim2.new(0, 343, 0, 29)
 			txtbtn.Font = Enum.Font.SourceSans
 			txtbtn.Text = ""
 			txtbtn.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -928,7 +927,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			RealTextbox.Parent = Textbox
 			RealTextbox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 			RealTextbox.BackgroundTransparency = 0
-			RealTextbox.Position = UDim2.new(0, 360, 0, 4)
+			RealTextbox.Position = UDim2.new(0, 240, 0, 4)
 			RealTextbox.Size = UDim2.new(0, 100, 0, 24)
 			RealTextbox.Font = Enum.Font.GothamSemibold
 			RealTextbox.Text = ""
@@ -955,7 +954,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Label.Parent = MainFramePage
 			Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Label.BackgroundTransparency = 1.000
-			Label.Size = UDim2.new(0, 470, 0, 20)
+			Label.Size = UDim2.new(0, 345, 0, 20)
 			Label.Font = Enum.Font.GothamSemibold
 			Label.TextColor3 = Color3.fromRGB(225, 225, 225)
 			Label.TextSize = 16.000
@@ -982,11 +981,11 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Seperator.Parent = MainFramePage
 			Seperator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Seperator.BackgroundTransparency = 1.000
-			Seperator.Size = UDim2.new(0, 470, 0, 20)
+			Seperator.Size = UDim2.new(0, 345, 0, 20)
 			
 			Sep1.Name = "Sep1"
 			Sep1.Parent = Seperator
-			Sep1.BackgroundColor3 = _G.Color
+			Sep1.BackgroundColor3 = getgenv().Color
 			Sep1.BorderSizePixel = 0
 			Sep1.Position = UDim2.new(0, 0, 0, 10)
 			Sep1.Size = UDim2.new(0, 80, 0, 1)
@@ -995,7 +994,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Sep2.Parent = Seperator
 			Sep2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Sep2.BackgroundTransparency = 1.000
-			Sep2.Position = UDim2.new(0, 185, 0, 0)
+			Sep2.Position = UDim2.new(0, 135, 0, 0)
 			Sep2.Size = UDim2.new(0, 100, 0, 20)
 			Sep2.Font = Enum.Font.GothamSemibold
 			Sep2.Text = text
@@ -1004,9 +1003,9 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			
 			Sep3.Name = "Sep3"
 			Sep3.Parent = Seperator
-			Sep3.BackgroundColor3 = _G.Color
+			Sep3.BackgroundColor3 = getgenv().Color
 			Sep3.BorderSizePixel = 0
-			Sep3.Position = UDim2.new(0, 390, 0, 10)
+			Sep3.Position = UDim2.new(0, 270, 0, 10)
 			Sep3.Size = UDim2.new(0, 80, 0, 1)
 		end
 
@@ -1019,17 +1018,17 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Linee.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Linee.BackgroundTransparency = 1.000
 			Linee.Position = UDim2.new(0, 0, 0.119999997, 0)
-			Linee.Size = UDim2.new(0, 470, 0, 20)
+			Linee.Size = UDim2.new(0, 345, 0, 20)
 			
 			Line.Name = "Line"
 			Line.Parent = Linee
-			Line.BackgroundColor3 = _G.Color
+			Line.BackgroundColor3 = getgenv().Color
 			Line.BorderSizePixel = 0
 			Line.Position = UDim2.new(0, 0, 0, 10)
-			Line.Size = UDim2.new(0, 470, 0, 1)
+			Line.Size = UDim2.new(0, 345, 0, 1)
 		end
 		return main
 	end
 	return uitab
 end
-return DarkraiX
+return HaunterX
