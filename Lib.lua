@@ -1,16 +1,16 @@
 local PlaceName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
 
-if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
+    if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
     
-repeat wait() until game:GetService("Players")
+    repeat wait() until game:GetService("Players")
     
-if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") end
+    if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") end
         
-wait(1)
+    wait(1)
 
 do local GUI = game.CoreGui:FindFirstChild("Haunter");if GUI then GUI:Destroy();end;if getgenv().Color == nil then
-   getgenv().Color = Color3.fromRGB(147,112,219)
-end 
+       getgenv().Color = Color3.fromRGB(147,112,219)
+   end 
 end
 
 local UserInputService = game:GetService("UserInputService")
@@ -104,7 +104,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 	Main.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Main.Size = UDim2.new(0, 0, 0, 0)
 	
-	Main:TweenSize(UDim2.new(0, 500, 0, 300),"Out","Quad",0.4,true)
+	Main:TweenSize(UDim2.new(0, 656, 0, 400),"Out","Quad",0.4,true)
 
 	local MCNR = Instance.new("UICorner")
 	MCNR.Name = "MCNR"
@@ -114,7 +114,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 	Top.Name = "Top"
 	Top.Parent = Main
 	Top.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-	Top.Size = UDim2.new(0, 500, 0, 27)
+	Top.Size = UDim2.new(0, 656, 0, 27)
 
 	local TCNR = Instance.new("UICorner")
 	TCNR.Name = "TCNR"
@@ -123,10 +123,10 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 	local Logo = Instance.new("ImageLabel")
 	Logo.Name = "Logo"
 	Logo.Parent = Top
-    Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Logo.BackgroundTransparency = 1.000
-    Logo.Position = UDim2.new(0, 5, 0, 1)
-    Logo.Size = UDim2.new(0, 20, 0, 20)
+	Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Logo.BackgroundTransparency = 1.000
+	Logo.Position = UDim2.new(0, 10, 0, 1)
+	Logo.Size = UDim2.new(0, 25, 0, 25)
 	Logo.Image = ""
 
 	local Name = Instance.new("TextLabel")
@@ -134,24 +134,24 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 	Name.Parent = Top
 	Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Name.BackgroundTransparency = 1.000
-	Name.Position = UDim2.new(0.05, 0, 0, 0)
-	Name.Size = UDim2.new(0, 50, 0, 27)
+	Name.Position = UDim2.new(0.0609756112, 0, 0, 0)
+	Name.Size = UDim2.new(0, 61, 0, 27)
 	Name.Font = Enum.Font.GothamSemibold
 	Name.Text = hubname
 	Name.TextColor3 = Color3.fromRGB(147,112,219)
-	Name.TextSize = 14
+	Name.TextSize = 17.000
 
 	local Hub = Instance.new("TextLabel")
 	Hub.Name = "Hub"
 	Hub.Parent = Top
 	Hub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Hub.BackgroundTransparency = 1.000
-	Hub.Position = UDim2.new(0.2, 0, 0, 0)
-	Hub.Size = UDim2.new(0, 120, 0, 27)
+	Hub.Position = UDim2.new(0, 110, 0, 0)
+	Hub.Size = UDim2.new(0, 81, 0, 27)
 	Hub.Font = Enum.Font.GothamSemibold
-	Hub.Text = "  | Made By:Ki Night"
+	Hub.Text = "  | "..gamename
 	Hub.TextColor3 = Color3.fromRGB(147,112,219)
-	Hub.TextSize = 14
+	Hub.TextSize = 17.000
 	Hub.TextXAlignment = Enum.TextXAlignment.Left
 
 	local BindButton = Instance.new("TextButton")
@@ -159,19 +159,19 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 	BindButton.Parent = Top
 	BindButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	BindButton.BackgroundTransparency = 1.000
-	BindButton.Position = UDim2.new(0.8, 0, 0, 0)
-	BindButton.Size = UDim2.new(0, 80, 0, 27)
+	BindButton.Position = UDim2.new(0.847561002, 0, 0, 0)
+	BindButton.Size = UDim2.new(0, 100, 0, 27)
 	BindButton.Font = Enum.Font.GothamSemibold
-	BindButton.Text = "Dev:Ki Night"
+	BindButton.Text = "["..yoo.."]"
 	BindButton.TextColor3 = Color3.fromRGB(147,112,219)
-	BindButton.TextSize = 11
+	BindButton.TextSize = 13.000
 
 	local Tab = Instance.new("Frame")
 	Tab.Name = "Tab"
 	Tab.Parent = Main
 	Tab.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	Tab.Position = UDim2.new(0, 5, 0, 30)
-	Tab.Size = UDim2.new(0, 100, 0, 265)
+	Tab.Size = UDim2.new(0, 150, 0, 365)
 
 	local TCNR = Instance.new("UICorner")
 	TCNR.Name = "TCNR"
@@ -183,7 +183,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 	ScrollTab.Active = true
 	ScrollTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	ScrollTab.BackgroundTransparency = 1.000
-	ScrollTab.Size = UDim2.new(0, 100, 0, 265)
+	ScrollTab.Size = UDim2.new(0, 150, 0, 365)
 	ScrollTab.CanvasSize = UDim2.new(0, 0, 0, 0)
 	ScrollTab.ScrollBarThickness = 0
 
@@ -191,20 +191,20 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 	PLL.Name = "PLL"
 	PLL.Parent = ScrollTab
 	PLL.SortOrder = Enum.SortOrder.LayoutOrder
-	PLL.Padding = UDim.new(0, 10)
+	PLL.Padding = UDim.new(0, 15)
 
-    local PPD = Instance.new("UIPadding")
-    PPD.Name = "PPD"
-    PPD.Parent = ScrollTab
-    PPD.PaddingLeft = UDim.new(0, 5)
-    PPD.PaddingTop = UDim.new(0, 5)
+	local PPD = Instance.new("UIPadding")
+	PPD.Name = "PPD"
+	PPD.Parent = ScrollTab
+	PPD.PaddingLeft = UDim.new(0, 10)
+	PPD.PaddingTop = UDim.new(0, 10)
 
 	local Page = Instance.new("Frame")
 	Page.Name = "Page"
 	Page.Parent = Main
 	Page.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-	Page.Position = UDim2.new(0.20, 0, 0.075000003, 0)
-	Page.Size = UDim2.new(0, 380, 0, 265)
+	Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
+	Page.Size = UDim2.new(0, 490, 0, 365)
 
 	local PCNR = Instance.new("UICorner")
 	PCNR.Name = "PCNR"
@@ -216,7 +216,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 	MainPage.ClipsDescendants = true
 	MainPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	MainPage.BackgroundTransparency = 1.000
-	MainPage.Size = UDim2.new(0, 380, 0, 265)
+	MainPage.Size = UDim2.new(0, 490, 0, 365)
 
 	local PageList = Instance.new("Folder")
 	PageList.Name = "PageList"
@@ -229,7 +229,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 	UIPageLayout.EasingDirection = Enum.EasingDirection.InOut
 	UIPageLayout.EasingStyle = Enum.EasingStyle.Quad
 	UIPageLayout.FillDirection = Enum.FillDirection.Vertical
-	UIPageLayout.Padding = UDim.new(0, 10)
+	UIPageLayout.Padding = UDim.new(0, 15)
 	UIPageLayout.TweenTime = 0.400
 	UIPageLayout.GamepadInputEnabled = false
 	UIPageLayout.ScrollWheelInputEnabled = false
@@ -244,7 +244,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 				Main:TweenSize(UDim2.new(0, 0, 0, 0),"In","Quad",0.4,true)
 			else
 				uihide = false
-				Main:TweenSize(UDim2.new(0, 500, 0, 300),"Out","Quad",0.4,true)
+				Main:TweenSize(UDim2.new(0, 656, 0, 400),"Out","Quad",0.4,true)
 			end
 		end
 	end)
@@ -259,10 +259,10 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 		TabButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 	    TabButton.BorderColor3 = Color3.fromRGB(147,112,219)
         TabButton.BorderSizePixel = 3
-		TabButton.Size = UDim2.new(0, 90, 0, 20)
+		TabButton.Size = UDim2.new(0, 130, 0, 23)
 		TabButton.Font = Enum.Font.GothamSemibold
 		TabButton.TextColor3 = Color3.fromRGB(225, 225, 225)
-		TabButton.TextSize = 13
+		TabButton.TextSize = 15.000
 		TabButton.TextTransparency = 0.500
 
 		local MainFramePage = Instance.new("ScrollingFrame")
@@ -272,7 +272,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 		MainFramePage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		MainFramePage.BackgroundTransparency = 1.000
 		MainFramePage.BorderSizePixel = 0
-		MainFramePage.Size = UDim2.new(0, 380, 0, 265)
+		MainFramePage.Size = UDim2.new(0, 490, 0, 365)
 		MainFramePage.CanvasSize = UDim2.new(0, 0, 0, 0)
 		MainFramePage.ScrollBarThickness = 0
 		
@@ -280,10 +280,10 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 		local UIListLayout = Instance.new("UIListLayout")
 		
 		UIPadding.Parent = MainFramePage
-		UIPadding.PaddingLeft = UDim.new(0, 5)
-		UIPadding.PaddingTop = UDim.new(0, 5)
+		UIPadding.PaddingLeft = UDim.new(0, 10)
+		UIPadding.PaddingTop = UDim.new(0, 10)
 
-		UIListLayout.Padding = UDim.new(0,10)
+		UIListLayout.Padding = UDim.new(0,15)
 		UIListLayout.Parent = MainFramePage
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 		
@@ -348,7 +348,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Button.Name = "Button"
 			Button.Parent = MainFramePage
 			Button.BackgroundColor3 = getgenv().Color
-			Button.Size = UDim2.new(0, 360, 0, 28)
+			Button.Size = UDim2.new(0, 470, 0, 31)
 			
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = Button
@@ -357,12 +357,12 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			TextBtn.Parent = Button
 			TextBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			TextBtn.Position = UDim2.new(0, 1, 0, 1)
-			TextBtn.Size = UDim2.new(0, 358, 0, 26)
+			TextBtn.Size = UDim2.new(0, 468, 0, 29)
 			TextBtn.AutoButtonColor = false
 			TextBtn.Font = Enum.Font.GothamSemibold
 			TextBtn.Text = text
 			TextBtn.TextColor3 = Color3.fromRGB(225, 225, 225)
-			TextBtn.TextSize = 12
+			TextBtn.TextSize = 15.000
 			
 			UICorner_2.CornerRadius = UDim.new(0, 5)
 			UICorner_2.Parent = TextBtn
@@ -373,7 +373,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Black.BackgroundTransparency = 1.000
 			Black.BorderSizePixel = 0
 			Black.Position = UDim2.new(0, 1, 0, 1)
-			Black.Size = UDim2.new(0, 358, 0, 26)
+			Black.Size = UDim2.new(0, 468, 0, 29)
 			
 			UICorner_3.CornerRadius = UDim.new(0, 5)
 			UICorner_3.Parent = Black
@@ -397,7 +397,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 				TweenService:Create(
 					TextBtn,
 					TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-					{TextSize = 12}
+					{TextSize = 15}
 				):Play()
 				callback()
 			end)
@@ -418,7 +418,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Toggle.Name = "Toggle"
 			Toggle.Parent = MainFramePage
 			Toggle.BackgroundColor3 = getgenv().Color
-			Toggle.Size = UDim2.new(0, 360, 0, 28)
+			Toggle.Size = UDim2.new(0, 470, 0, 31)
 
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = Toggle
@@ -427,7 +427,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Button.Parent = Toggle
 			Button.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Button.Position = UDim2.new(0, 1, 0, 1)
-			Button.Size = UDim2.new(0, 358, 0, 26)
+			Button.Size = UDim2.new(0, 468, 0, 29)
 			Button.AutoButtonColor = false
 			Button.Font = Enum.Font.SourceSans
 			Button.Text = ""
@@ -442,34 +442,34 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Label.BackgroundTransparency = 1.000
 			Label.Position = UDim2.new(0, 1, 0, 1)
-			Label.Size = UDim2.new(0, 358, 0, 26)
+			Label.Size = UDim2.new(0, 468, 0, 29)
 			Label.Font = Enum.Font.GothamSemibold
 			Label.Text = text
 			Label.TextColor3 = Color3.fromRGB(225, 225, 225)
-			Label.TextSize = 12
+			Label.TextSize = 15.000
 
 			ToggleImage.Name = "ToggleImage"
 			ToggleImage.Parent = Toggle
 			ToggleImage.BackgroundColor3 = Color3.fromRGB(225, 225, 225)
-			ToggleImage.Position = UDim2.new(0, 310, 0, 4)
-			ToggleImage.Size = UDim2.new(0, 40, 0, 18)
+			ToggleImage.Position = UDim2.new(0, 415, 0, 5)
+			ToggleImage.Size = UDim2.new(0, 45, 0, 20)
 
-			UICorner_3.CornerRadius = UDim.new(0, 9)
+			UICorner_3.CornerRadius = UDim.new(0, 10)
 			UICorner_3.Parent = ToggleImage
 
 			Circle.Name = "Circle"
 			Circle.Parent = ToggleImage
 			Circle.BackgroundColor3 = Color3.fromRGB(227, 60, 60)
-			Circle.Position = UDim2.new(0, 2, 0, 1)
-			Circle.Size = UDim2.new(0, 14, 0, 14)
+			Circle.Position = UDim2.new(0, 2, 0, 2)
+			Circle.Size = UDim2.new(0, 16, 0, 16)
 
-			UICorner_4.CornerRadius = UDim.new(0, 7)
+			UICorner_4.CornerRadius = UDim.new(0, 10)
 			UICorner_4.Parent = Circle
 
 			Button.MouseButton1Click:Connect(function()
 				if toggled == false then
 					toggled = true
-					Circle:TweenPosition(UDim2.new(0,24,0,1),"Out","Sine",0.2,true)
+					Circle:TweenPosition(UDim2.new(0,27,0,2),"Out","Sine",0.2,true)
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -477,7 +477,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 					):Play()
 				else
 					toggled = false
-					Circle:TweenPosition(UDim2.new(0,2,0,1),"Out","Sine",0.2,true)
+					Circle:TweenPosition(UDim2.new(0,2,0,2),"Out","Sine",0.2,true)
 					TweenService:Create(
 						Circle,
 						TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -489,7 +489,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 
 			if config == true then
 				toggled = true
-				Circle:TweenPosition(UDim2.new(0,24,0,1),"Out","Sine",0.4,true)
+				Circle:TweenPosition(UDim2.new(0,27,0,2),"Out","Sine",0.4,true)
 				TweenService:Create(
 					Circle,
 					TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -513,7 +513,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Dropdown.Parent = MainFramePage
 			Dropdown.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Dropdown.ClipsDescendants = true
-			Dropdown.Size = UDim2.new(0, 360, 0, 28)
+			Dropdown.Size = UDim2.new(0, 470, 0, 31)
 			
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = Dropdown
@@ -522,11 +522,11 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			DropTitle.Parent = Dropdown
 			DropTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropTitle.BackgroundTransparency = 1.000
-			DropTitle.Size = UDim2.new(0, 360, 0, 28)
+			DropTitle.Size = UDim2.new(0, 470, 0, 31)
 			DropTitle.Font = Enum.Font.GothamSemibold
 			DropTitle.Text = text.. " : "
 			DropTitle.TextColor3 = Color3.fromRGB(225, 225, 225)
-			DropTitle.TextSize = 12
+			DropTitle.TextSize = 15.000
 			
 			DropScroll.Name = "DropScroll"
 			DropScroll.Parent = DropTitle
@@ -534,8 +534,8 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			DropScroll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropScroll.BackgroundTransparency = 1.000
 			DropScroll.BorderSizePixel = 0
-			DropScroll.Position = UDim2.new(0, 0, 0, 28)
-			DropScroll.Size = UDim2.new(0, 360, 0, 80)
+			DropScroll.Position = UDim2.new(0, 0, 0, 31)
+			DropScroll.Size = UDim2.new(0, 470, 0, 100)
 			DropScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
 			DropScroll.ScrollBarThickness = 3
 			
@@ -551,16 +551,16 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			DropImage.Parent = Dropdown
 			DropImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropImage.BackgroundTransparency = 1.000
-			DropImage.Position = UDim2.new(0, 335, 0, 5)
+			DropImage.Position = UDim2.new(0, 445, 0, 6)
 			DropImage.Rotation = 180.000
-            DropImage.Size = UDim2.new(0, 18, 0, 18)
+			DropImage.Size = UDim2.new(0, 20, 0, 20)
 			DropImage.Image = "rbxassetid://6031090990"
 			
 			DropButton.Name = "DropButton"
 			DropButton.Parent = Dropdown
 			DropButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			DropButton.BackgroundTransparency = 1.000
-			DropButton.Size = UDim2.new(0, 360, 0, 28)
+			DropButton.Size = UDim2.new(0, 470, 0, 31)
 			DropButton.Font = Enum.Font.SourceSans
 			DropButton.Text = ""
 			DropButton.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -573,11 +573,11 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 				Item.Parent = DropScroll
 				Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				Item.BackgroundTransparency = 1.000
-				Item.Size = UDim2.new(0, 350, 0, 23)
+				Item.Size = UDim2.new(0, 460, 0, 26)
 				Item.Font = Enum.Font.GothamSemibold
 				Item.Text = tostring(v)
 				Item.TextColor3 = Color3.fromRGB(225, 225, 225)
-				Item.TextSize = 11
+				Item.TextSize = 13.000
 				Item.TextTransparency = 0.500
 
 				Item.MouseEnter:Connect(function()
@@ -598,7 +598,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 
 				Item.MouseButton1Click:Connect(function()
 					isdropping = false
-					Dropdown:TweenSize(UDim2.new(0,360,0,28),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,470,0,31),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -614,7 +614,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			DropButton.MouseButton1Click:Connect(function()
 				if isdropping == false then
 					isdropping = true
-					Dropdown:TweenSize(UDim2.new(0,360,0,100),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,470,0,131),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -622,7 +622,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 					):Play()
 				else
 					isdropping = false
-					Dropdown:TweenSize(UDim2.new(0,360,0,28),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,470,0,31),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -638,11 +638,11 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 				Item.Parent = DropScroll
 				Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				Item.BackgroundTransparency = 1.000
-				Item.Size = UDim2.new(0, 350, 0, 23)
+				Item.Size = UDim2.new(0, 470, 0, 26)
 				Item.Font = Enum.Font.GothamSemibold
 				Item.Text = tostring(t)
 				Item.TextColor3 = Color3.fromRGB(225, 225, 225)
-				Item.TextSize = 11
+				Item.TextSize = 13.000
 				Item.TextTransparency = 0.500
 
 				Item.MouseEnter:Connect(function()
@@ -663,7 +663,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 
 				Item.MouseButton1Click:Connect(function()
 					isdropping = false
-					Dropdown:TweenSize(UDim2.new(0,360,0,28),"Out","Quad",0.3,true)
+					Dropdown:TweenSize(UDim2.new(0,470,0,31),"Out","Quad",0.3,true)
 					TweenService:Create(
 						DropImage,
 						TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -676,7 +676,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			function dropfunc:Clear()
 				DropTitle.Text = tostring(text).." : "
 				isdropping = false
-				Dropdown:TweenSize(UDim2.new(0,360,0,28),"Out","Quad",0.3,true)
+				Dropdown:TweenSize(UDim2.new(0,470,0,31),"Out","Quad",0.3,true)
 				TweenService:Create(
 					DropImage,
 					TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
@@ -691,7 +691,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			return dropfunc
 		end
 
-		function main:Slider(text,min,max,set,callback)
+				function main:Slider(text,min,max,set,callback)
 			local Slider = Instance.new("Frame")
 			local slidercorner = Instance.new("UICorner")
 			local sliderr = Instance.new("Frame")
@@ -714,8 +714,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Slider.Parent = MainFramePage
 			Slider.BackgroundColor3 = getgenv().Color
 			Slider.BackgroundTransparency = 0
-            Slider.Size = UDim2.new(0, 360, 0, 45)
-
+			Slider.Size = UDim2.new(0, 470, 0, 51)
 
 			slidercorner.CornerRadius = UDim.new(0, 5)
 			slidercorner.Name = "slidercorner"
@@ -725,8 +724,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			sliderr.Parent = Slider
 			sliderr.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			sliderr.Position = UDim2.new(0, 1, 0, 1)
-			sliderr.Size = UDim2.new(0, 358, 0, 43)
-
+			sliderr.Size = UDim2.new(0, 468, 0, 49)
 
 			sliderrcorner.CornerRadius = UDim.new(0, 5)
 			sliderrcorner.Name = "sliderrcorner"
@@ -736,12 +734,12 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			SliderLabel.Parent = sliderr
 			SliderLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			SliderLabel.BackgroundTransparency = 1.000
-			SliderLabel.Position = UDim2.new(0, 10, 0, 0)
-			SliderLabel.Size = UDim2.new(0, 150, 0, 22)
+			SliderLabel.Position = UDim2.new(0, 15, 0, 0)
+			SliderLabel.Size = UDim2.new(0, 180, 0, 26)
 			SliderLabel.Font = Enum.Font.GothamSemibold
 			SliderLabel.Text = text
 			SliderLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
-			SliderLabel.TextSize = 13
+			SliderLabel.TextSize = 16.000
 			SliderLabel.TextTransparency = 0
 			SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -749,14 +747,14 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			HAHA.Parent = sliderr
 			HAHA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			HAHA.BackgroundTransparency = 1.000
-			HAHA.Size = UDim2.new(0, 358, 0, 27)
+			HAHA.Size = UDim2.new(0, 468, 0, 29)
 
 			AHEHE.Name = "AHEHE"
 			AHEHE.Parent = sliderr
 			AHEHE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			AHEHE.BackgroundTransparency = 1.000
-			AHEHE.Position = UDim2.new(0, 10, 0, 25)
-            AHEHE.Size = UDim2.new(0, 300, 0, 4)
+			AHEHE.Position = UDim2.new(0, 10, 0, 35)
+			AHEHE.Size = UDim2.new(0, 448, 0, 5)
 			AHEHE.Font = Enum.Font.SourceSans
 			AHEHE.Text = ""
 			AHEHE.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -765,15 +763,13 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			bar.Name = "bar"
 			bar.Parent = AHEHE
 			bar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-            bar.Size = UDim2.new(0, 300, 0, 4)
-
+			bar.Size = UDim2.new(0, 448, 0, 5)
 
 			bar1.Name = "bar1"
 			bar1.Parent = bar
 			bar1.BackgroundColor3 = getgenv().Color
 			bar1.BackgroundTransparency = 0
-			bar1.Size = UDim2.new(set/max, 0, 0, 4)
-
+			bar1.Size = UDim2.new(set/max, 0, 0, 5)
 
 			bar1corner.CornerRadius = UDim.new(0, 5)
 			bar1corner.Name = "bar1corner"
@@ -786,8 +782,8 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			circlebar.Name = "circlebar"
 			circlebar.Parent = bar1
 			circlebar.BackgroundColor3 = Color3.fromRGB(225, 225, 225)
-			circlebar.Position = UDim2.new(1, -2, 0, -2)
-            circlebar.Size = UDim2.new(0, 8, 0, 8)
+			circlebar.Position = UDim2.new(1, -2, 0, -3)
+			circlebar.Size = UDim2.new(0, 10, 0, 10)
 
 			UICorner.CornerRadius = UDim.new(0, 100)
 			UICorner.Parent = circlebar
@@ -796,9 +792,8 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			slidervalue.Parent = sliderr
 			slidervalue.BackgroundColor3 = getgenv().Color
 			slidervalue.BackgroundTransparency = 0
-			slidervalue.Position = UDim2.new(0, 255, 0, 2)
-            slidervalue.Size = UDim2.new(0, 55, 0, 15)
-
+			slidervalue.Position = UDim2.new(0, 395, 0, 5)
+			slidervalue.Size = UDim2.new(0, 65, 0, 18)
 
 			valuecorner.CornerRadius = UDim.new(0, 5)
 			valuecorner.Name = "valuecorner"
@@ -807,10 +802,10 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			TextBox.Parent = slidervalue
 			TextBox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 			TextBox.Position = UDim2.new(0, 1, 0, 1)
-			TextBox.Size = UDim2.new(0, 53, 0, 13)
+			TextBox.Size = UDim2.new(0, 63, 0, 16)
 			TextBox.Font = Enum.Font.GothamSemibold
 			TextBox.TextColor3 = Color3.fromRGB(225, 225, 225)
-			TextBox.TextSize = 8
+			TextBox.TextSize = 9.000
 			TextBox.Text = set
 			TextBox.TextTransparency = 0
 
@@ -828,29 +823,29 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			end
 			
 			AHEHE.MouseButton1Down:Connect(function()
-				Value = math.floor((((tonumber(max) - tonumber(min)) / 300) * bar1.AbsoluteSize.X) + tonumber(min)) or 0
+				Value = math.floor((((tonumber(max) - tonumber(min)) / 448) * bar1.AbsoluteSize.X) + tonumber(min)) or 0
 				pcall(function()
 					callback(Value)
 				end)
-				bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 300), 0, 4)
-				circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 290), 0, -2)
+				bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
+				circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
 				moveconnection = mouse.Move:Connect(function()
 					TextBox.Text = Value
-					Value = math.floor((((tonumber(max) - tonumber(min)) / 300) * bar1.AbsoluteSize.X) + tonumber(min))
+					Value = math.floor((((tonumber(max) - tonumber(min)) / 448) * bar1.AbsoluteSize.X) + tonumber(min))
 					pcall(function()
 						callback(Value)
 					end)
-					bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 300), 0, 4)
-					circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 290), 0, -2)
+					bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
+					circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
 				end)
 				releaseconnection = uis.InputEnded:Connect(function(Mouse)
 					if Mouse.UserInputType == Enum.UserInputType.MouseButton1 or Mouse.UserInputType == Enum.UserInputType.Touch then
-						Value = math.floor((((tonumber(max) - tonumber(min)) / 300) * bar1.AbsoluteSize.X) + tonumber(min))
+						Value = math.floor((((tonumber(max) - tonumber(min)) / 448) * bar1.AbsoluteSize.X) + tonumber(min))
 						pcall(function()
 							callback(Value)
 						end)
-						bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 300), 0, 4)
-						circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 290), 0, -2)
+						bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 448), 0, 5)
+						circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 438), 0, -3)
 						moveconnection:Disconnect()
 						releaseconnection:Disconnect()
 					end
@@ -858,7 +853,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			end)
 			releaseconnection = uis.InputEnded:Connect(function(Mouse)
 				if Mouse.UserInputType == Enum.UserInputType.MouseButton1 or Mouse.UserInputType == Enum.UserInputType.Touch  then
-					Value = math.floor((((tonumber(max) - tonumber(min)) / 300) * bar1.AbsoluteSize.X) + tonumber(min))
+					Value = math.floor((((tonumber(max) - tonumber(min)) / 448) * bar1.AbsoluteSize.X) + tonumber(min))
 					TextBox.Text = Value
 				end
 			end)
@@ -867,8 +862,8 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 				if tonumber(TextBox.Text) > max then
 					TextBox.Text  = max
 				end
-				bar1.Size = UDim2.new((TextBox.Text or 0) / max, 0, 0, 4)
-				circlebar.Position = UDim2.new(1, -2, 0, -2)
+				bar1.Size = UDim2.new((TextBox.Text or 0) / max, 0, 0, 5)
+				circlebar.Position = UDim2.new(1, -2, 0, -3)
 				TextBox.Text = tostring(TextBox.Text and math.floor( (TextBox.Text / max) * (max - min) + min) )
 				pcall(callback, TextBox.Text)
 			end)
@@ -888,7 +883,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Textbox.Parent = MainFramePage
 			Textbox.BackgroundColor3 = getgenv().Color
 			Textbox.BackgroundTransparency = 0
-			Textbox.Size = UDim2.new(0, 360, 0, 28)
+			Textbox.Size = UDim2.new(0, 470, 0, 31)
 
 			TextboxCorner.CornerRadius = UDim.new(0, 5)
 			TextboxCorner.Name = "TextboxCorner"
@@ -898,7 +893,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Textboxx.Parent = Textbox
 			Textboxx.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Textboxx.Position = UDim2.new(0, 1, 0, 1)
-			Textboxx.Size = UDim2.new(0, 358, 0, 26)
+			Textboxx.Size = UDim2.new(0, 468, 0, 29)
 
 			TextboxxCorner.CornerRadius = UDim.new(0, 5)
 			TextboxxCorner.Name = "TextboxxCorner"
@@ -908,12 +903,12 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			TextboxLabel.Parent = Textbox
 			TextboxLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			TextboxLabel.BackgroundTransparency = 1.000
-			TextboxLabel.Position = UDim2.new(0, 10, 0, 0)
-            TextboxLabel.Size = UDim2.new(0, 120, 0, 28)
+			TextboxLabel.Position = UDim2.new(0, 15, 0, 0)
 			TextboxLabel.Text = text
+			TextboxLabel.Size = UDim2.new(0, 145, 0, 31)
 			TextboxLabel.Font = Enum.Font.GothamSemibold
 			TextboxLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
-			TextboxLabel.TextSize = 13
+			TextboxLabel.TextSize = 16.000
 			TextboxLabel.TextTransparency = 0
 			TextboxLabel.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -922,7 +917,7 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			txtbtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			txtbtn.BackgroundTransparency = 1.000
 			txtbtn.Position = UDim2.new(0, 1, 0, 1)
-			txtbtn.Size = UDim2.new(0, 358, 0, 26)
+			txtbtn.Size = UDim2.new(0, 468, 0, 29)
 			txtbtn.Font = Enum.Font.SourceSans
 			txtbtn.Text = ""
 			txtbtn.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -932,12 +927,12 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			RealTextbox.Parent = Textbox
 			RealTextbox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 			RealTextbox.BackgroundTransparency = 0
-			RealTextbox.Position = UDim2.new(0, 250, 0, 2)
-			RealTextbox.Size = UDim2.new(0, 90, 0, 22)
+			RealTextbox.Position = UDim2.new(0, 360, 0, 4)
+			RealTextbox.Size = UDim2.new(0, 100, 0, 24)
 			RealTextbox.Font = Enum.Font.GothamSemibold
 			RealTextbox.Text = ""
 			RealTextbox.TextColor3 = Color3.fromRGB(225, 225, 225)
-			RealTextbox.TextSize = 10
+			RealTextbox.TextSize = 11.000
 			RealTextbox.TextTransparency = 0
 
 			RealTextbox.FocusLost:Connect(function()
@@ -959,14 +954,14 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Label.Parent = MainFramePage
 			Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Label.BackgroundTransparency = 1.000
-			Label.Size = UDim2.new(0, 360, 0, 18)
+			Label.Size = UDim2.new(0, 470, 0, 20)
 			Label.Font = Enum.Font.GothamSemibold
 			Label.TextColor3 = Color3.fromRGB(225, 225, 225)
-			Label.TextSize = 12
+			Label.TextSize = 16.000
 			Label.Text = text
 			Label.TextXAlignment = Enum.TextXAlignment.Left
 
-			PaddingLabel.PaddingLeft = UDim.new(0,10)
+			PaddingLabel.PaddingLeft = UDim.new(0,15)
 			PaddingLabel.Parent = Label
 			PaddingLabel.Name = "PaddingLabel"
 	
@@ -986,32 +981,32 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Seperator.Parent = MainFramePage
 			Seperator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Seperator.BackgroundTransparency = 1.000
-			Seperator.Size = UDim2.new(0, 360, 0, 20)
+			Seperator.Size = UDim2.new(0, 470, 0, 20)
 			
 			Sep1.Name = "Sep1"
 			Sep1.Parent = Seperator
 			Sep1.BackgroundColor3 = getgenv().Color
 			Sep1.BorderSizePixel = 0
 			Sep1.Position = UDim2.new(0, 0, 0, 10)
-			Sep1.Size = UDim2.new(0, 60, 0, 1)
+			Sep1.Size = UDim2.new(0, 80, 0, 1)
 			
 			Sep2.Name = "Sep2"
 			Sep2.Parent = Seperator
 			Sep2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Sep2.BackgroundTransparency = 1.000
-			Sep2.Position = UDim2.new(0, 125, 0, 0)
-            Sep2.Size = UDim2.new(0, 100, 0, 20)
+			Sep2.Position = UDim2.new(0, 185, 0, 0)
+			Sep2.Size = UDim2.new(0, 100, 0, 20)
 			Sep2.Font = Enum.Font.GothamSemibold
 			Sep2.Text = text
 			Sep2.TextColor3 = Color3.fromRGB(255, 255, 255)
-			Sep2.TextSize = 12
+			Sep2.TextSize = 14.000
 			
 			Sep3.Name = "Sep3"
 			Sep3.Parent = Seperator
 			Sep3.BackgroundColor3 = getgenv().Color
 			Sep3.BorderSizePixel = 0
-			Sep3.Position = UDim2.new(0, 275, 0, 10)
-			Sep3.Size = UDim2.new(0, 60, 0, 1)
+			Sep3.Position = UDim2.new(0, 390, 0, 10)
+			Sep3.Size = UDim2.new(0, 80, 0, 1)
 		end
 
 		function main:Line()
@@ -1023,14 +1018,14 @@ function HaunterX:Window(text,gamenme,logo,keybind)
 			Linee.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Linee.BackgroundTransparency = 1.000
 			Linee.Position = UDim2.new(0, 0, 0.119999997, 0)
-            Linee.Size = UDim2.new(0, 360, 0, 20)
+			Linee.Size = UDim2.new(0, 470, 0, 20)
 			
 			Line.Name = "Line"
 			Line.Parent = Linee
 			Line.BackgroundColor3 = getgenv().Color
 			Line.BorderSizePixel = 0
 			Line.Position = UDim2.new(0, 0, 0, 10)
-			Line.Size = UDim2.new(0, 360, 0, 1)
+			Line.Size = UDim2.new(0, 470, 0, 1)
 		end
 		return main
 	end
