@@ -6315,7 +6315,7 @@ local MinimizeButton = New("TextButton", {
 	New("ImageLabel", {
 		Image = Mobile and "rbxassetid://98421764129763" or "",
 		Size = UDim2.new(1, 0, 1, 0),
-		BackgroundTransparency = 0,
+		BackgroundTransparency = 100,
 	}, {
 		New("UIAspectRatioConstraint", {
 			AspectRatio = 1,
@@ -6331,14 +6331,14 @@ if Mobile then
 		Parent = GUI,
 		Size = UDim2.new(0.06, 0, 0.15, 0),
 		Position = UDim2.new(1, -60, 0, 10),
-		BackgroundTransparency = 0,
+		BackgroundTransparency = 100,
 		ZIndex = 999999999,
 	},
 	{
 		New("Frame", {
 			BackgroundColor3 = Color3.fromRGB(0, 0, 0),
 			Size = UDim2.new(1, 0, 1, 0),
-			BackgroundTransparency = 0,
+			BackgroundTransparency = 100,
 			BorderSizePixel = 0
 		}, {
 			New("UICorner", {
@@ -6352,14 +6352,14 @@ else
 		Parent = GUI,
 		Size = UDim2.new(0, 0, 0, 0),
 		Position = UDim2.new(0.45, 0, 0.025, 0),
-		BackgroundTransparency = 0,
+		BackgroundTransparency = 100,
 		ZIndex = 999999999,
 	},
 	{
 		New("Frame", {
 			BackgroundColor3 = Color3.fromRGB(0, 0, 0),
 			Size = UDim2.new(0, 0, 0, 0),
-			BackgroundTransparency = 0,
+			BackgroundTransparency = 100,
 			BorderSizePixel = 0
 		}, {
 			New("UICorner", {
