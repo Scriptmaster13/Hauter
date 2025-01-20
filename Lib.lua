@@ -27,7 +27,7 @@ local Mobile = false
 
 if RunService:IsStudio() then
 	if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled and not UserInputService.MouseEnabled then
-		Mobile = true
+		Mobile = false
 	else
 		Mobile = false
 	end
